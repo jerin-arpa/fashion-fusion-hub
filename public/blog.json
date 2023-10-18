@@ -70,5 +70,77 @@
         "date": "26 October 2023",
         "title": "Business Casual Men's Shirt",
         "details": "A smart and versatile shirt suitable for both work and casual occasions."
+    },
+    {
+        "id": 10,
+        "image": "https://i.ibb.co/56ZyRRB/IMG-20231018-WA0018.jpg",
+        "fashion": "Men",
+        "date": "18 October 2023",
+        "title": "Stylish Men's Jacket",
+        "details": "A trendy jacket that combines style and warmth for the modern man."
+    },
+    {
+        "id": 11,
+        "image": "https://i.ibb.co/KLNxWv2/IMG-20231018-WA0023.jpg",
+        "fashion": "Women",
+        "date": "19 October 2023",
+        "title": "Chic Women's Dress",
+        "details": "An elegant dress that exudes sophistication and charm for every occasion."
+    },
+    {
+        "id": 12,
+        "image": "https://i.ibb.co/7rP5NmJ/IMG-20231018-WA0021.jpg",
+        "fashion": "Men",
+        "date": "20 October 2023",
+        "title": "Casual Men's T-Shirt",
+        "details": "A comfortable and stylish t-shirt perfect for a laid-back day out."
+    },
+    {
+        "id": 13,
+        "image": "https://i.ibb.co/DbxRSSt/IMG-20231018-WA0019.jpg",
+        "fashion": "Women",
+        "date": "21 October 2023",
+        "title": "Fashionable Women's Handbag",
+        "details": "A trendy handbag that adds a touch of glamour to any outfit."
+    },
+    {
+        "id": 14,
+        "image": "https://i.ibb.co/0tyr7Cq/IMG-20231018-WA0024.jpg",
+        "fashion": "Fashion",
+        "date": "22 October 2023",
+        "title": "Unisex Sunglasses",
+        "details": "Stylish sunglasses that offer both protection and fashion-forward appeal."
+    },
+    {
+        "id": 15,
+        "image": "https://i.ibb.co/dmnB2gB/IMG-20231018-WA0025.jpg",
+        "fashion": "Men",
+        "date": "23 October 2023",
+        "title": "Classic Men's Suit",
+        "details": "A timeless suit that embodies sophistication and style for men of all ages."
+    },
+    {
+        "id": 16,
+        "image": "https://i.ibb.co/5TrQ4zp/IMG-20231018-WA0022.jpg",
+        "fashion": "Women",
+        "date": "24 October 2023",
+        "title": "Athletic Women's Leggings",
+        "details": "Comfortable leggings designed for the active and fashion-conscious woman."
+    },
+    {
+        "id": 17,
+        "image": "https://i.ibb.co/rv95jBL/IMG-20231018-WA0020.jpg",
+        "fashion": "Fashion",
+        "date": "25 October 2023",
+        "title": "Trendy Unisex Sneakers",
+        "details": "Fashion-forward sneakers that combine style and comfort for all genders."
+    },
+    {
+        "id": 18,
+        "image": "https://i.ibb.co/bNdRDM2/IMG-20231018-WA0017.jpg",
+        "fashion": "Men",
+        "date": "26 October 2023",
+        "title": "Business Casual Men's Shirt",
+        "details": "A smart and versatile shirt suitable for both work and casual occasions."
     }
 ]
