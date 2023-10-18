@@ -22,32 +22,32 @@ const Navbar = () => {
     const navLink = <>
         <li>
             <NavLink to='/' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold text-amber-600 underline" : ""
+                isPending ? "pending" : isActive ? "font-bold text-[#FD0054] underline" : ""
             }>Home</NavLink>
         </li>
         <li>
             <NavLink to='/x' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold text-amber-600 underline" : ""
+                isPending ? "pending" : isActive ? "font-bold text-[#FD0054] underline" : ""
             }>x</NavLink>
         </li>
         <li>
             <NavLink to='/Y' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold text-amber-600 underline" : ""
+                isPending ? "pending" : isActive ? "font-bold text-[#FD0054] underline" : ""
             }>Y</NavLink>
         </li>
         <li>
             <NavLink to='/addProduct' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold underline text-amber-600" : ""
+                isPending ? "pending" : isActive ? "font-bold underline text-[#FD0054]" : ""
             }>Add Product</NavLink>
         </li>
         <li>
             <NavLink to='/myCart' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold underline text-amber-600" : ""
+                isPending ? "pending" : isActive ? "font-bold underline text-[#FD0054]" : ""
             }>My Cart</NavLink>
         </li>
         <li>
             <NavLink to='/about' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold underline text-amber-600" : ""
+                isPending ? "pending" : isActive ? "font-bold underline text-[#FD0054]" : ""
             }>About</NavLink>
         </li>
     </>
@@ -56,7 +56,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar container mx-auto px-5 py-7">
+            <div className="navbar container mx-auto px-5 py-7 text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,8 +67,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex gap-1">
-                        <BiSolidFlame className="text-3xl text-amber-600"></BiSolidFlame>
-                        <p className="text-sm md:text-2xl font-extrabold"><span className="text-amber-600">Fashion</span> Fusion Hub</p>
+                        <BiSolidFlame className="text-3xl text-[#FD0054]"></BiSolidFlame>
+                        <p className="text-sm md:text-2xl font-extrabold">Fashion<span className="text-[#FD0054]"> Fusion Hub</span></p>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -114,22 +114,22 @@ const Navbar = () => {
                                                     <hr className="my-7 w-1/2" />
                                                 </div>
                                                 <div className="text-center">
-                                                    <h2 className="text-sm md:text-xl mb-2 text-white"><span className="text-amber-600">Name:</span> {user.displayName
+                                                    <h2 className="text-sm md:text-xl mb-2 text-white"><span className="text-[#FD0054]">Name:</span> {user.displayName
                                                     }</h2>
-                                                    <p className="text-sm  md:text-lg mb-5 text-white"><span className="text-amber-600">Email:</span> {user.email}</p>
+                                                    <p className="text-sm  md:text-lg mb-5 text-white"><span className="text-[#FD0054]">Email:</span> {user.email}</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <Link to='/login' className="flex items-center">
-                                        <button onClick={handleSignOut} className="bg-amber-600 border-0 text-white p-2 rounded-lg"><LuLogOut></LuLogOut></button>
+                                        <button onClick={handleSignOut} className="bg-[#FD0054] border-0 text-white p-2 rounded-lg"><LuLogOut></LuLogOut></button>
                                     </Link>
                                 </div>
                                 :
                                 <>
                                     <Link to='/login'>
-                                        <button className="bg-amber-600 border-0 text-white p-2 md:p-3 px-1 md:px-4 rounded-lg text-sm md:text-xl">Login</button>
+                                        <button className="bg-[#FD0054] border-0 text-white p-2 md:p-3 px-1 md:px-4 rounded-lg text-sm md:text-xl">Login</button>
                                     </Link>
                                 </>
                         }

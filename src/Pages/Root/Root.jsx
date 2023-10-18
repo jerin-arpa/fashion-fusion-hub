@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 
 const Root = () => {
     return (
-        <div>
+        <div className="bg-[#2B2024]">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
