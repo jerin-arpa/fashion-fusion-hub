@@ -24,13 +24,13 @@ const Footer = () => {
                 </nav>
                 <form>
                     <header className="footer-title">Newsletter</header>
-                    <fieldset className="form-control w-80">
+                    <fieldset className="form-control">
                         <label className="label">
                             <span className="label-text">Enter your email address</span>
                         </label>
                         <div className="relative">
-                            <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
-                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                            <input type="text" placeholder="username@site.com" className="input input-bordered w-32 lg:w-full rounded-r-none" />
+                            <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white absolute rounded-l-none">Subscribe</button>
                         </div>
                     </fieldset>
                 </form>

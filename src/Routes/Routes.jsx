@@ -7,6 +7,8 @@ import Root from '../Pages/Root/Root';
 import AddProduct from '../Pages/AddProduct/AddProduct';
 import MyCart from '../Pages/MyCart/MyCart';
 import About from '../Pages/About/About';
+import Blogs from '../Pages/Blogs/Blogs';
+import Contact from '../Pages/Contact/Contact';
 
 
 const router = createBrowserRouter([
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('/brand.json'),
+                loader: () => fetch('/blog.json'),
             },
             {
                 path: "/login",
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
             {
                 path: "/myCart",
                 element: <MyCart></MyCart>,
+            },
+            {
+                path: "/blogs",
+                element: <Blogs></Blogs>,
+            },
+            {
+                path: "/contact",
+                element: <Contact></Contact>,
             },
             {
                 path: "/about",

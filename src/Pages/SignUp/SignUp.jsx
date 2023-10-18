@@ -91,28 +91,28 @@ const SignUp = () => {
 
 
     return (
-        <div className='bg-slate-200 py-10'>
-            <div className="flex justify-center my-12 container mx-auto px-5">
-                <div className="bg-[#2B2024] rounded-xl w-full md:w-3/4 lg:w-2/4 py-8">
-                    <h2 className="text-3xl font-bold text-center pt-10 pb-5"><span className='text-[#FD0054]'>SignUp</span> <span className='text-white'>your account</span></h2>
+        <div>
+            <div className="flex justify-center my-12 container mx-auto px-5 py-10">
+                <div className="border rounded-xl w-full md:w-3/4 lg:w-2/4 py-8">
+                    <h2 className="text-3xl font-bold text-center pt-10 pb-5"><span className='text-[#FD0054]'>SignUp</span> <span className=''>your account</span></h2>
                     <form onSubmit={handleSignUp} className="px-4 md:px-14">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Your Name</span>
+                                <span className="label-text">Your Name</span>
                             </label>
                             <input type="text" name="name" placeholder="Enter your name" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Email</span>
+                                <span className="label-text">Email</span>
                             </label>
                             <input type="email" name="email" placeholder="Enter your email" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Password</span>
+                                <span className="label-text">Password</span>
                             </label>
                             <input type={showPassword ? "text" : "password"}
                                 name="password" placeholder="Enter your Password" className="input input-bordered w-full" required />
@@ -134,9 +134,9 @@ const SignUp = () => {
 
                         <div className="flex gap-3 mt-5">
                             <div className='flex items-center'>
-                                <input className='checkbox checkbox-info checkbox-xs md:checkbox-sm' type="checkbox" name="terms" id="" />
+                                <input className='checkbox checkbox-xs md:checkbox-sm' type="checkbox" name="terms" id="" />
                             </div>
-                            <label htmlFor="terms" className="text-xs md:text-lg text-white">Accept our terms and conditions</label>
+                            <label htmlFor="terms" className="text-xs md:text-lg">Accept our terms and conditions</label>
                         </div>
                         <div>
                             {
@@ -156,13 +156,13 @@ const SignUp = () => {
                         <div>
                             <button onClick={handleGoogleSignUp} className="btn bg-transparent border-[#FD0054] mt-5 mb-4 w-full">
                                 <FcGoogle className='text-xs md:text-xl'></FcGoogle>
-                                <span className="text-xs md:text-md text-white">Continue with Google</span>
+                                <span className="text-xs md:text-md">Continue with Google</span>
                             </button>
                         </div>
                     </form>
 
                     <div className="flex justify-center mb-4">
-                        <h2 className="text-xs md:text-lg mt-6 md:mt-8 mb-6 text-white">Already have an account? <Link to='/login' className="text-[#FD0054] underline font-bold">Login</Link></h2>
+                        <h2 className="text-xs md:text-lg mt-6 md:mt-8 mb-6">Already have an account? <Link to='/login' className="text-[#FD0054] underline font-bold">Login</Link></h2>
                     </div>
                 </div>
             </div>

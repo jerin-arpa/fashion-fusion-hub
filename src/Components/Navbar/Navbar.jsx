@@ -26,16 +26,6 @@ const Navbar = () => {
             }>Home</NavLink>
         </li>
         <li>
-            <NavLink to='/x' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold text-[#FD0054] underline" : ""
-            }>x</NavLink>
-        </li>
-        <li>
-            <NavLink to='/Y' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold text-[#FD0054] underline" : ""
-            }>Y</NavLink>
-        </li>
-        <li>
             <NavLink to='/addProduct' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold underline text-[#FD0054]" : ""
             }>Add Product</NavLink>
@@ -44,6 +34,16 @@ const Navbar = () => {
             <NavLink to='/myCart' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold underline text-[#FD0054]" : ""
             }>My Cart</NavLink>
+        </li>
+        <li>
+            <NavLink to='/blogs' className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold text-[#FD0054] underline" : ""
+            }>Blogs</NavLink>
+        </li>
+        <li>
+            <NavLink to='/contact' className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold text-[#FD0054] underline" : ""
+            }>Contact</NavLink>
         </li>
         <li>
             <NavLink to='/about' className={({ isActive, isPending }) =>
@@ -55,8 +55,8 @@ const Navbar = () => {
 
 
     return (
-        <div>
-            <div className="navbar container mx-auto px-5 py-7 text-white">
+        <div className="bg-base-200">
+            <div className="navbar container mx-auto px-5 py-5">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

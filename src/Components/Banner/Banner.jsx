@@ -7,8 +7,8 @@ const Banner = () => {
             <div>
                 <div className="carousel w-full">
                     <div id="slide1" className="carousel-item relative w-full">
-                        <div className="hero " style={{ backgroundImage: 'url(https://i.ibb.co/JRm6brG/IMG-20231018-WA0013.jpg)', placeItems: 'normal' }}>
-                            <div className="hero-overlay bg-opacity-0"></div>
+                        <div className="hero " style={{ backgroundImage: 'url(https://i.ibb.co/g9Rd7SV/IMG-20231018-WA0005.jpg)', placeItems: 'normal' }}>
+                            <div className="hero-overlay bg-opacity-50"></div>
                             <div className="container mx-auto px-5 py-28 md:py-44">
                                 <div className="max-w-md lg:max-w-2xl">
                                     <div className="flex gap-3">
