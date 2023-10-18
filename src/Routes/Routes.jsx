@@ -9,6 +9,8 @@ import MyCart from '../Pages/MyCart/MyCart';
 import About from '../Pages/About/About';
 import Blogs from '../Pages/Blogs/Blogs';
 import Contact from '../Pages/Contact/Contact';
+import PrivateRoute from './PrivateRoute';
+import UpdateProduct from '../Pages/UpdateProduct/UpdateProduct';
 
 
 const router = createBrowserRouter([
@@ -32,11 +34,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addProduct",
-                element: <AddProduct></AddProduct>,
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
+            },
+            {
+                path: "/updateProduct",
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
             },
             {
                 path: "/myCart",
-                element: <MyCart></MyCart>,
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
             },
             {
                 path: "/blogs",

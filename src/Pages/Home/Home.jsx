@@ -17,6 +17,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
 
+            {/* Brands Collection */}
             <div className="bg-base-200">
                 <div className="container mx-auto px-5 py-28">
                     <div>
@@ -28,28 +29,59 @@ const Home = () => {
                                 <p className="mb-4 text-xl ">All Available Brands</p>
                             </div>
                             <h2 className="text-4xl font-bold text-[#FD0054]">A Comprehensive Collection of Available Brands</h2>
-                            <p className="mt-5 mb-20">Step into a realm of diverse and distinguished brands with our curated brand showcase section. Explore an array of renowned and emerging brands across various industries, each boasting its unique story, values, and innovative offerings.</p>
+                            <p className="mt-5">Step into a realm of diverse and distinguished brands with our curated brand showcase section. Explore an array of renowned and emerging brands across various industries, each boasting its unique story, values, and innovative offerings.</p>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
+                </div>
+            </div>
 
+            {/* Blogs */}
+            <div className="bg-base-100">
+                <div className="container mx-auto px-5 py-28">
+                    <div>
+                        <div className="mb-10 lg:w-2/3">
+                            <div className="flex gap-3">
+                                <div className="flex">
+                                    <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
+                                </div>
+                                <p className="mb-4 text-xl ">Fashion Showcase</p>
+                            </div>
+                            <h2 className="text-4xl font-bold text-[#FD0054]">Latest Trends and Must-Have Styles</h2>
+                            <p className="mt-5 mb-20">Welcome to our Fashion Showcase, where style meets substance! Explore the hottest fashion trends and essential wardrobe pieces for men and women. Our carefully curated selection features a variety of clothing and accessories to keep you ahead of the fashion game.</p>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {
+                            blogs.slice(0, 3).map(blog => <BlogCard key={blog.id} blog={blog}></BlogCard>)
+                        }
+                    </div>
+
+
+
+                    <div className="mt-10 flex justify-center">
+                        <Link to='/blogs'>
+                            <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white absolute rounded-l-none">Show All</button>
+                        </Link>
                     </div>
                 </div>
             </div>
 
 
-
-            <div className="bg-base-100">
+            {/* Deals and discount */}
+            <div className="bg-base-200">
                 <div className="py-28 container mx-auto px-5">
-                    <div className="mb-10 lg:w-2/3">
-                        <div className="flex gap-3">
-                            <div className="flex">
-                                <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
+                    <div>
+                        <div className="mb-10 lg:w-2/3">
+                            <div className="flex gap-3">
+                                <div className="flex">
+                                    <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
+                                </div>
+                                <p className="mb-4 text-xl ">Fashion Frenzy</p>
                             </div>
-                            <p className="mb-4 text-xl ">Fashion Frenzy</p>
+                            <h2 className="text-4xl font-bold text-[#FD0054]">Unbeatable Deals and Discounts Await!</h2>
+                            <p className="mt-5 mb-20">Explore a curated selection of clothing, accessories, and more, all at prices that make fashion dreams a reality. Do not miss out on the best in discounted fashion shop now and strut your stuff with confidence!</p>
                         </div>
-                        <h2 className="text-4xl font-bold text-[#FD0054]">Unbeatable Deals and Discounts Await!</h2>
-                        <p className="mt-5 mb-20">Explore a curated selection of clothing, accessories, and more, all at prices that make fashion dreams a reality. Do not miss out on the best in discounted fashion shop now and strut your stuff with confidence!</p>
                     </div>
 
                     <div className="flex flex-col lg:flex-row gap-5">
@@ -92,38 +124,6 @@ const Home = () => {
                                 <h2 className="text-3xl text-black">Western <br /> Style</h2>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div className="bg-base-200">
-                <div className="container mx-auto px-5 py-28">
-                    <div>
-                        <div className="mb-10 lg:w-2/3">
-                            <div className="flex gap-3">
-                                <div className="flex">
-                                    <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
-                                </div>
-                                <p className="mb-4 text-xl ">Fashion Showcase</p>
-                            </div>
-                            <h2 className="text-4xl font-bold text-[#FD0054]">Latest Trends and Must-Have Styles</h2>
-                            <p className="mt-5 mb-20">Welcome to our Fashion Showcase, where style meets substance! Explore the hottest fashion trends and essential wardrobe pieces for men and women. Our carefully curated selection features a variety of clothing and accessories to keep you ahead of the fashion game.</p>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        {
-                            blogs.slice(0, 3).map(blog => <BlogCard key={blog.id} blog={blog}></BlogCard>)
-                        }
-                    </div>
-
-
-
-                    <div className="mt-10 flex justify-center">
-                        <Link to='/blogs'>
-                            <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white absolute rounded-l-none">Show All</button>
-                        </Link>
                     </div>
                 </div>
             </div>
