@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/z5QMDXy/IMG-20231018-WA0004.jpg",
+        "brand": "Nike"
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/SQNsYhJ/IMG-20231018-WA0006.jpg",
+        "brand": "Adidas"
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/Pt0RFcx/IMG-20231018-WA0002.jpg",
+        "brand": "Gucci"
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/FmY56KN/IMG-20231018-WA0001.jpg",
+        "brand": "Zara"
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/xL0k7cV/IMG-20231018-WA0007.jpg",
+        "brand": "H&M"
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/Jny0wTL/IMG-20231018-WA0003.jpg",
+        "brand": "Levi's"
+    }
+]
