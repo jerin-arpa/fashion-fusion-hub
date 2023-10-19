@@ -1,13 +1,53 @@
 import { GiChemicalBolt } from "react-icons/gi";
 import Marquees from "../../Components/Marquees/Marquees";
 import image5 from '../../assets/images/5.webp';
+import Swal from "sweetalert2";
 
 
 const AddProduct = () => {
+
+    const handleAddProducts = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const brandName = form.brandName.value;
+        const type = form.type.value;
+        const rating = form.rating.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        const image = form.image.value;
+
+        const newProduct = { name, brandName, type, rating, price, description, image };
+        console.log(newProduct);
+
+
+        fetch('http://localhost:5000/product', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newProduct),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    })
+                    form.reset();
+                }
+            })
+    }
+
+
     return (
         <div className="container mx-auto px-5">
             <div className="flex justify-center">
-                <form className="w-full lg:w-2/3 mt-20 border p-10 rounded-xl">
+                <form onSubmit={handleAddProducts} className="w-full lg:w-2/3 mt-20 border p-10 rounded-xl">
                     <h2 className="text-3xl font-bold text-center pb-5"><span className="text-[#FD0054]">Add</span> <span className="">your Product</span></h2>
                     <hr className="my-5" />
                     <div className="flex flex-col lg:flex-row gap-10">
@@ -32,7 +72,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Rating</span>
                                 </label>
-                                <input type="text" name="rating" placeholder="Enter Product rating" className="input input-bordered" required />
+                                <input type="number" name="rating" placeholder="Enter Product rating" className="input input-bordered" required />
                             </div>
                         </div>
 
@@ -41,7 +81,15 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Brand Name</span>
                                 </label>
-                                <input type="text" name="brandName" placeholder="Enter Product brand Name" className="input input-bordered" required />
+                                <select className="select select-bordered w-full text-gray-400" required name="brandName" type="text">
+                                    <option disabled selected>Select Brand Name</option>
+                                    <option>Nike</option>
+                                    <option>Adidas</option>
+                                    <option>Gucci</option>
+                                    <option>Zara</option>
+                                    <option>H&M</option>
+                                    <option>Levis</option>
+                                </select>
                             </div>
 
 

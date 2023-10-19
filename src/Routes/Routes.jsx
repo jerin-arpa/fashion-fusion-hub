@@ -12,6 +12,7 @@ import Contact from '../Pages/Contact/Contact';
 import PrivateRoute from './PrivateRoute';
 import UpdateProduct from '../Pages/UpdateProduct/UpdateProduct';
 import AddBrands from '../Pages/AddBrands/AddBrands';
+import Products from '../Pages/Products/Products';
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <Home></Home>,
                 loader: () => fetch('http://localhost:5000/brand'),
+            },
+            {
+                path: "/products",
+                element: <Products></Products>,
+                loader: () => fetch('http://localhost:5000/product'),
             },
             {
                 path: "/login",

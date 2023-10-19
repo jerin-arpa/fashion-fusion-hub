@@ -171,6 +171,7 @@ const Home = () => {
             </div>
 
 
+
             {/* subscribe */}
             <div className="py-20 text-white">
                 <div className="container mx-auto px-5">
