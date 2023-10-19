@@ -11,6 +11,7 @@ import Blogs from '../Pages/Blogs/Blogs';
 import Contact from '../Pages/Contact/Contact';
 import PrivateRoute from './PrivateRoute';
 import UpdateProduct from '../Pages/UpdateProduct/UpdateProduct';
+import AddBrands from '../Pages/AddBrands/AddBrands';
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('/blog.json'),
+                loader: () => fetch('http://localhost:5000/brand'),
             },
             {
                 path: "/login",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/addProduct",
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
+            },
+            {
+                path: "/addBrands",
+                element: <PrivateRoute><AddBrands></AddBrands></PrivateRoute>,
             },
             {
                 path: "/updateProduct",

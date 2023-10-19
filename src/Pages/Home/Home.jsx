@@ -7,23 +7,22 @@ import image2 from '../../assets/images/2.webp';
 import image3 from '../../assets/images/3.webp';
 import image4 from '../../assets/images/4.webp';
 import image5 from '../../assets/images/5.webp';
-import BlogCard from "../../Components/BlogCard/BlogCard";
 import Marquees from "../../Components/Marquees/Marquees";
+import Brands from "../../Components/Brands/Brands";
 
 const Home = () => {
 
-    const blogs = useLoaderData();
+    const loadedBrand = useLoaderData();
 
     return (
         <div>
             <Banner></Banner>
-            <Marquees></Marquees>
 
             {/* Brands Collection */}
-            <div className="bg-base-200">
+            <div>
                 <div className="container mx-auto px-5 py-28">
-                    <div>
-                        <div className="mb-10 lg:w-2/3">
+                    <div className="flex flex-col lg:flex-row justify-between">
+                        <div className="mb-14 lg:w-2/3">
                             <div className="flex gap-3">
                                 <div className="flex">
                                     <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
@@ -33,45 +32,25 @@ const Home = () => {
                             <h2 className="text-4xl font-bold text-[#FD0054]">A Comprehensive Collection of Available Brands</h2>
                             <p className="mt-5">Step into a realm of diverse and distinguished brands with our curated brand showcase section. Explore an array of renowned and emerging brands across various industries, each boasting its unique story, values, and innovative offerings.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            {/* Blogs */}
-            <div className="bg-base-100">
-                <div className="container mx-auto px-5 py-28">
-                    <div>
-                        <div className="mb-10 lg:w-2/3">
-                            <div className="flex gap-3">
-                                <div className="flex">
-                                    <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
-                                </div>
-                                <p className="mb-4 text-xl ">Fashion Showcase</p>
-                            </div>
-                            <h2 className="text-4xl font-bold text-[#FD0054]">Latest Trends and Must-Have Styles</h2>
-                            <p className="mt-5 mb-20">Welcome to our Fashion Showcase, where style meets substance! Explore the hottest fashion trends and essential wardrobe pieces for men and women. Our carefully curated selection features a variety of clothing and accessories to keep you ahead of the fashion game.</p>
+                        <div className="flex items-center">
+                            <Link to='/addBrands'>
+                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">Add Brand</button>
+                            </Link>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                         {
-                            blogs.slice(0, 3).map(blog => <BlogCard key={blog.id} blog={blog}></BlogCard>)
+                            loadedBrand.map(brand => <Brands key={brand._id} brand={brand}></Brands>)
                         }
-                    </div>
-
-
-
-                    <div className="mt-10 flex justify-center">
-                        <Link to='/blogs'>
-                            <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white absolute rounded-l-none">Show All</button>
-                        </Link>
                     </div>
                 </div>
             </div>
 
 
             {/* Deals and discount */}
-            <div className="bg-base-200">
+            <div>
                 <div className="py-28 container mx-auto px-5">
                     <div>
                         <div className="mb-10 lg:w-2/3">
@@ -131,6 +110,67 @@ const Home = () => {
             </div>
 
 
+
+            {/* Blogs */}
+            <div>
+                <div className="container mx-auto px-5 py-28">
+                    <div className="flex flex-col lg:flex-row justify-between mb-14">
+                        <div className="lg:w-2/3">
+                            <div className="flex gap-3">
+                                <div className="flex">
+                                    <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
+                                </div>
+                                <p className="mb-4 text-xl ">Fashion Showcase</p>
+                            </div>
+                            <h2 className="text-4xl font-bold text-[#FD0054]">Latest Trends and Must-Have Styles</h2>
+                            <p className="mt-5">Welcome to our Fashion Showcase, where style meets substance! Explore the hottest fashion trends and essential wardrobe pieces for men and women. Our carefully curated selection features a variety of clothing and accessories to keep you ahead of the fashion game.</p>
+                        </div>
+
+
+                        <div className="flex items-center">
+                            <Link to='/blogs'>
+                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">See All Blogs</button>
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <div className='bg-white shadow-2xl'>
+                            <img className='w-full' src='https://i.ibb.co/56ZyRRB/IMG-20231018-WA0018.jpg' alt="" />
+                            <div className='p-5'>
+                                <p className='text-[#FD0054] font-bold'>Men/18 October 2023</p>
+                                <h2 className='text-2xl font-bold my-2'>Stylish Mens Jacket</h2>
+                                <p>A trendy jacket that combines style and warmth for the modern man.</p>
+                            </div>
+                        </div>
+
+                        <div className='bg-white shadow-2xl'>
+                            <img className='w-full' src='https://i.ibb.co/KLNxWv2/IMG-20231018-WA0023.jpg' alt="" />
+                            <div className='p-5'>
+                                <p className='text-[#FD0054] font-bold'>Women/19 October 2023</p>
+                                <h2 className='text-2xl font-bold my-2'>Chic Womens Dress</h2>
+                                <p>An elegant dress that exudes sophistication and charm for every occasion.</p>
+                            </div>
+                        </div>
+
+                        <div className='bg-white shadow-2xl'>
+                            <img className='w-full' src='https://i.ibb.co/DbxRSSt/IMG-20231018-WA0019.jpg' alt="" />
+                            <div className='p-5'>
+                                <p className='text-[#FD0054] font-bold'>Women/21 October 2023</p>
+                                <h2 className='text-2xl font-bold my-2'>Fashionable Womens Handbag</h2>
+                                <p>A trendy handbag that adds a touch of glamour to any outfit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="mt-14">
+                <Marquees></Marquees>
+            </div>
+
+
             <div className="bg-base-100">
                 <div className="container mx-auto px-5 py-28">
                     <div className=" relative">
@@ -150,17 +190,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-/* 
-<div className='border-4 rounded-full h-72 bg-white'>
-            <div className='flex justify-center mt-14'>
-                <img className='w-40 h-32 mb-4' src={image} alt="" />
-            </div>
-            <div className='flex justify-center'>
-                <h2 className='text-3xl font-bold text-[#FD0054]'>{name}</h2>
-            </div>
-        </div>
-
-*/
