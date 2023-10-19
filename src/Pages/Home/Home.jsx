@@ -166,20 +166,32 @@ const Home = () => {
             </div>
 
 
-            <div className="mt-14">
+            <div className="mt-10">
                 <Marquees></Marquees>
             </div>
 
 
-            <div className="bg-base-100">
-                <div className="container mx-auto px-5 py-28">
-                    <div className=" relative">
-                        <img className="w-full" src={image5} alt="" />
-                        <div className="absolute bottom-8 md:bottom-36 md:left-20 left-2 lg:bottom-64 lg:left-36">
-                            <h2 className="lg:text-4xl font-bold text-[#FD0054] mb-2 lg:mb-8">Subscribe our Newsletter</h2>
-                            <div className="relative">
-                                <input type="text" placeholder="username@site.com" className="input input-bordered w-32 lg:w-full rounded-r-none bg-transparent" />
-                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white  absolute rounded-l-none">Send</button>
+            {/* subscribe */}
+            <div className="py-20 text-white">
+                <div className="container mx-auto px-5">
+                    <div className="hero py-44 rounded-3xl" style={{ backgroundImage: `url(${image5})` }}>
+                        <div className="hero-overlay bg-opacity-40"></div>
+                        <div className="hero-content text-center">
+                            <div className="w-full text-white my-5">
+                                <div className="flex gap-3 justify-center">
+                                    <div>
+                                        <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
+                                    </div>
+                                    <p className="mb-3 text-white">Subscribe</p>
+                                </div>
+                                <h2 className="md:text-2xl lg:text-4xl font-bold text-[#FD0054] mb-5">Subscribe our Newsletter</h2>
+
+                                <div className="flex justify-start">
+                                    <div className="relative">
+                                        <input type="text" placeholder="username@site.com" className="input input-bordered w-32 md:w-full lg:w-[350px] rounded-r-none" />
+                                        <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white  absolute rounded-l-none">Send</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
