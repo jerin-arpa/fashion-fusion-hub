@@ -1,8 +1,10 @@
+import Marquees from "../../Components/Marquees/Marquees";
+
 const AddProduct = () => {
     return (
-        <div>
-            <div className="container mx-auto px-5 flex justify-center">
-                <form className="w-2/3 my-10 border p-10 rounded-xl">
+        <div className="container mx-auto px-5">
+            <div className="flex justify-center">
+                <form className="w-full lg:w-2/3 mt-20 border p-10 rounded-xl">
                     <h2 className="text-3xl font-bold text-center pb-5"><span className="text-[#FD0054]">Add</span> <span className="">your Product</span></h2>
                     <hr className="my-5" />
                     <div className="flex flex-col lg:flex-row gap-10">
@@ -70,6 +72,8 @@ const AddProduct = () => {
                     </div>
                 </form>
             </div>
+
+            <Marquees></Marquees>
         </div>
     );
 };

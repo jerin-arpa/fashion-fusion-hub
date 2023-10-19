@@ -8,6 +8,7 @@ import image3 from '../../assets/images/3.webp';
 import image4 from '../../assets/images/4.webp';
 import image5 from '../../assets/images/5.webp';
 import BlogCard from "../../Components/BlogCard/BlogCard";
+import Marquees from "../../Components/Marquees/Marquees";
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Marquees></Marquees>
 
             {/* Brands Collection */}
             <div className="bg-base-200">
