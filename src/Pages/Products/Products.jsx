@@ -1,10 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { GiChemicalBolt } from "react-icons/gi";
 import Product from "../../Components/Product/Product";
 
 const Products = () => {
 
     const products = useLoaderData();
+    const { name } = useParams();
+    const brandProducts = products.filter(item => item.brandName.toLowerCase() == name.toLowerCase());
 
     return (
         <div>
@@ -85,7 +87,7 @@ const Products = () => {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 px-5">
                     {
-                        products.map(product => <Product key={product._id} product={product}></Product>)
+                        brandProducts.length === 0 ? <h2>Nothing to show</h2> : brandProducts.map(product => <Product key={product._id} product={product}></Product>)
                     }
                 </div>
             </div>

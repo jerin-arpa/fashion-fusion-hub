@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
 
-    const { name, brandName, type, rating, price, image } = product;
+    const { _id, name, brandName, type, rating, price, image } = product;
 
     return (
         <div>
@@ -59,8 +59,10 @@ const Product = ({ product }) => {
                         </div>
 
                         <div className="flex gap-4">
-                            <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">Details</button>
-                            <Link>
+                            <Link to={`/productDetails/${_id}`} >
+                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">Details</button>
+                            </Link>
+                            <Link to={`/updateProduct/${_id}`}>
                                 <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">Update</button>
                             </Link>
                         </div>

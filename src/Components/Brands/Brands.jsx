@@ -13,7 +13,7 @@ const Brands = ({ brand }) => {
 
     return (
         <div>
-            <Link to='/products'>
+            <Link to={`/products/${brandName}`}>
                 <div className='bg-white p-10 shadow-xl'>
                     <div data-aos="fade-down"
                         data-aos-easing="linear"

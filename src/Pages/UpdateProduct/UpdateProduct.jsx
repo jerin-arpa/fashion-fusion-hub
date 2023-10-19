@@ -1,12 +1,58 @@
+import PropTypes from 'prop-types';
 import { GiChemicalBolt } from "react-icons/gi";
 import image5 from '../../assets/images/5.webp';
 import Marquees from "../../Components/Marquees/Marquees";
+import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
 
 const UpdateProduct = () => {
+
+
+    const product = useLoaderData();
+    const { _id, name, brandName, type, rating, price, image } = product;
+
+
+    const handleUpdateProduct = event => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const brandName = form.brandName.value;
+        const type = form.type.value;
+        const rating = form.rating.value;
+        const price = form.price.value;
+        const image = form.image.value;
+
+        const updatedProduct = { name, brandName, type, rating, price, image };
+        console.log(updatedProduct);
+
+
+
+        fetch(`http://localhost:5000/product/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedProduct),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Updated successfully',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    })
+                }
+            });
+    }
+
+
     return (
         <div className="container mx-auto px-5">
             <div className="flex justify-center">
-                <form className="w-full lg:w-2/3 mt-20 border p-10 rounded-xl">
+                <form onSubmit={handleUpdateProduct} className="w-full lg:w-2/3 mt-20 border p-10 rounded-xl">
                     <h2 className="text-3xl font-bold text-center pb-5"><span className="text-[#FD0054]">Update</span> <span className="">your Product</span></h2>
                     <hr className="my-5" />
                     <div className="flex flex-col lg:flex-row gap-10">
@@ -15,7 +61,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" name="name" placeholder="Enter Product name" className="input input-bordered" required />
+                                <input type="text" name="name" defaultValue={name} placeholder="Enter Product name" className="input input-bordered" required />
                             </div>
 
 
@@ -23,7 +69,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Type</span>
                                 </label>
-                                <input type="text" name="type" placeholder="Enter Product type" className="input input-bordered" required />
+                                <input type="text" name="type" defaultValue={type} placeholder="Enter Product type" className="input input-bordered" required />
                             </div>
 
 
@@ -31,7 +77,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Rating</span>
                                 </label>
-                                <input type="text" name="rating" placeholder="Enter Product rating" className="input input-bordered" required />
+                                <input type="text" name="rating" defaultValue={rating} placeholder="Enter Product rating" className="input input-bordered" required />
                             </div>
                         </div>
 
@@ -40,7 +86,7 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Brand Name</span>
                                 </label>
-                                <input type="text" name="brandName" placeholder="Enter Product brand Name" className="input input-bordered" required />
+                                <input type="text" name="brandName" defaultValue={brandName} placeholder="Enter Product brand Name" className="input input-bordered" required />
                             </div>
 
 
@@ -48,14 +94,14 @@ const UpdateProduct = () => {
                                 <label className="label">
                                     <span className="label-text">Price</span>
                                 </label>
-                                <input type="text" name="price" placeholder="Enter product price" className="input input-bordered" required />
+                                <input type="text" name="price" defaultValue={price} placeholder="Enter product price" className="input input-bordered" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Image</span>
                                 </label>
-                                <input type="text" name="image" placeholder="Enter product image" className="input input-bordered" required />
+                                <input type="text" name="image" defaultValue={image} placeholder="Enter product image" className="input input-bordered" required />
                             </div>
                         </div>
                     </div>
@@ -98,6 +144,11 @@ const UpdateProduct = () => {
             </div>
         </div>
     );
+};
+
+
+UpdateProduct.propTypes = {
+    product: PropTypes.object,
 };
 
 export default UpdateProduct;

@@ -32,12 +32,6 @@ const Home = () => {
                             <h2 className="text-4xl font-bold text-[#FD0054]">A Comprehensive Collection of Available Brands</h2>
                             <p className="mt-5">Step into a realm of diverse and distinguished brands with our curated brand showcase section. Explore an array of renowned and emerging brands across various industries, each boasting its unique story, values, and innovative offerings.</p>
                         </div>
-
-                        <div className="flex items-center">
-                            <Link to='/addBrands'>
-                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">Add Brand</button>
-                            </Link>
-                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
