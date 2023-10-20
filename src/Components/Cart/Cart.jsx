@@ -48,7 +48,7 @@ const Cart = ({ cart, myCart, setMyCart }) => {
                     <div className="col-span-1">
                         <img className="w-full h-full" src={image} alt="" />
                     </div>
-                    <div className="flex items-center col-span-3">
+                    <div className="flex items-center col-span-3 py-5">
                         <div>
                             <p className='text-3xl text-[#FD0054] font-bold mb-5'>{name}</p>
 

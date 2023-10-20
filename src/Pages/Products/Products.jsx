@@ -87,7 +87,8 @@ const Products = () => {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 py-20 px-5">
                     {
-                        brandProducts.length === 0 ? <h2>Nothing to show</h2> : brandProducts.map(product => <Product key={product._id} product={product}></Product>)
+                        brandProducts.length === 0 ? <h2 className="
+                         text-5xl font-bold text-[#FD0054]">There Is no Product available right now. </h2> : brandProducts.map(product => <Product key={product._id} product={product}></Product>)
                     }
                 </div>
             </div>

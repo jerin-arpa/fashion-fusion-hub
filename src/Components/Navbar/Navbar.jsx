@@ -4,9 +4,11 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { FaUserCircle } from 'react-icons/fa';
 import { LuLogOut } from 'react-icons/lu';
 import { BiSolidFlame } from 'react-icons/bi';
-// import { BsToggleOff, BsToggleOn } from 'react-icons/bs';
+import DarkModeToggle from "react-dark-mode-toggle";
+import PropTypes from 'prop-types';
 
-const Navbar = () => {
+
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
     const { user, logOut } = useContext(AuthContext);
 
@@ -82,11 +84,16 @@ const Navbar = () => {
                         {
                             user ?
                                 <div className="flex gap-2 md:gap-4">
+                                    <div className="flex items-center">
+                                        <DarkModeToggle
+                                            onChange={setIsDarkMode}
+                                            checked={isDarkMode}
+                                            size={40}
+                                        />
+
+                                    </div>
                                     <div className="dropdown dropdown-end">
                                         <div className="flex gap-3">
-                                            <div className="flex items-center">
-                                                {/* <BsToggleOff className="text-3xl text-[#FD0054]"></BsToggleOff> */}
-                                            </div>
                                             <label tabIndex={0}>
                                                 {
                                                     user.photoURL ? (
@@ -138,6 +145,12 @@ const Navbar = () => {
             </div>
         </div >
     );
+};
+
+
+Navbar.propTypes = {
+    isDarkMode: PropTypes.bool,
+    setIsDarkMode: PropTypes.func,
 };
 
 export default Navbar;
