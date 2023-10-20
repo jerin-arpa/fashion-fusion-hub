@@ -20,7 +20,7 @@ const ProductDetails = () => {
     const handleAddToCart = () => {
         const newProduct = { userEmail: user.email, product };
 
-        fetch('https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/myCart', {
+        fetch('https://fashion-fusion-hub-server-10x2szige-ismat-jerins-projects.vercel.app/myCart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

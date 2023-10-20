@@ -21,7 +21,7 @@ const AddProduct = () => {
         console.log(newProduct);
 
 
-        fetch('https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/product', {
+        fetch('https://fashion-fusion-hub-server-10x2szige-ismat-jerins-projects.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
