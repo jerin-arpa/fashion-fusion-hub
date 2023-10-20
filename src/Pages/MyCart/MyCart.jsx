@@ -1,12 +1,16 @@
 import { GiChemicalBolt } from 'react-icons/gi';
 import image5 from '../../assets/images/5.webp';
 import Marquees from '../../Components/Marquees/Marquees';
+import { useLoaderData } from 'react-router';
 
 const MyCart = () => {
+
+    const carts = useLoaderData();
+
     return (
         <div>
             <div className="container mx-auto px-5 py-10">
-                <h2>My Cart</h2>
+                <h2>My Cart: {carts.length}</h2>
 
 
                 <div className="my-5">

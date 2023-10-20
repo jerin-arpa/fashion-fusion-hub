@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { FaUserCircle } from 'react-icons/fa';
 import { LuLogOut } from 'react-icons/lu';
 import { BiSolidFlame } from 'react-icons/bi';
-
+// import { BsToggleOff, BsToggleOn } from 'react-icons/bs';
 
 const Navbar = () => {
 
@@ -85,7 +85,7 @@ const Navbar = () => {
                                     <div className="dropdown dropdown-end">
                                         <div className="flex gap-3">
                                             <div className="flex items-center">
-                                                <h2 className="hidden md:flex">{user.displayName}</h2>
+                                                {/* <BsToggleOff className="text-3xl text-[#FD0054]"></BsToggleOff> */}
                                             </div>
                                             <label tabIndex={0}>
                                                 {
@@ -98,7 +98,7 @@ const Navbar = () => {
                                                 }
                                             </label>
                                         </div>
-                                        <div className="dropdown-content z-[1] menu p-2 shadow bg-slate-800 rounded-box lg:w-96">
+                                        <div className="dropdown-content z-[1] menu p-2 shadow rounded-box lg:w-96 bg-white">
                                             <div className="p-3">
                                                 <div className="flex justify-center">
                                                     {
@@ -114,9 +114,9 @@ const Navbar = () => {
                                                     <hr className="my-7 w-1/2" />
                                                 </div>
                                                 <div className="text-center">
-                                                    <h2 className="text-sm md:text-xl mb-2 text-white"><span className="text-[#FD0054]">Name:</span> {user.displayName
+                                                    <h2 className="text-sm md:text-xl mb-2"><span className="text-[#FD0054]">Name:</span> {user.displayName
                                                     }</h2>
-                                                    <p className="text-sm  md:text-lg mb-5 text-white"><span className="text-[#FD0054]">Email:</span> {user.email}</p>
+                                                    <p className="text-sm  md:text-lg mb-5 "><span className="text-[#FD0054]">Email:</span> {user.email}</p>
                                                 </div>
                                             </div>
                                         </div>
