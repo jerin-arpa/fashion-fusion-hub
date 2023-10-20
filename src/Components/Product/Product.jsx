@@ -8,7 +8,7 @@ const Product = ({ product }) => {
 
     return (
         <div>
-            <div className='bg-gray-50 grid grid-cols-1 md:grid-cols-2 justify-between'>
+            <div className='bg-gray-50 grid grid-cols-1 md:grid-cols-2 justify-between h-96'>
                 <div>
                     <img className="h-full" src={image} alt="" />
                 </div>
@@ -60,10 +60,10 @@ const Product = ({ product }) => {
 
                         <div className="flex gap-4">
                             <Link to={`/productDetails/${_id}`} >
-                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">Details</button>
+                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold hover:border-[#FD0054]">Details</button>
                             </Link>
                             <Link to={`/updateProduct/${_id}`}>
-                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold">Update</button>
+                                <button className="btn bg-[#FD0054] border-[#FD0054] hover:bg-white hover:text-[#FD0054] text-white font-bold hover:border-[#FD0054]">Update</button>
                             </Link>
                         </div>
                     </div>

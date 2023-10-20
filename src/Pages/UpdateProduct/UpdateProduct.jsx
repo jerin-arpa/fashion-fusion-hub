@@ -27,7 +27,7 @@ const UpdateProduct = () => {
 
 
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

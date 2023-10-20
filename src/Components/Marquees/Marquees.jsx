@@ -2,8 +2,8 @@ import Marquee from "react-fast-marquee";
 
 const Marquees = () => {
     return (
-        <div className="container mx-auto px-5 py-10 bg-white rounded-xl">
-            <Marquee speed={80} pauseOnHover={true} autoFill={true}>
+        <div className="container mx-auto px-5 py-10">
+            <Marquee speed={80} pauseOnHover={true} autoFill={true} className=" bg-white rounded-xl">
                 <img className="w-44" src="https://i.ibb.co/z5QMDXy/IMG-20231018-WA0004.jpg" alt="" />
 
                 <img className="w-32" src="https://i.ibb.co/SQNsYhJ/IMG-20231018-WA0006.jpg" alt="" />

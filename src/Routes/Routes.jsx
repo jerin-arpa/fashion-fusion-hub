@@ -25,22 +25,22 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/brand'),
+                loader: () => fetch('https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/brand'),
             },
             {
                 path: "/products/:name",
                 element: <Products></Products>,
-                loader: () => fetch('http://localhost:5000/product'),
+                loader: () => fetch('https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/product'),
             },
             {
                 path: "/productDetails/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/product'),
+                loader: () => fetch('https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/product'),
             },
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`),
+                loader: ({ params }) => fetch(`https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/product/${params.id}`),
             },
             {
                 path: "/login",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             {
                 path: "/myCart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/myCart'),
+                loader: () => fetch('https://fashion-fusion-hub-server-cnt9c8hpg-ismat-jerins-projects.vercel.app/myCart'),
             },
             {
                 path: "/blogs",
