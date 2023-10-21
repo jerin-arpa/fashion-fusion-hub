@@ -36,7 +36,7 @@ const MyCart = () => {
                     myCart.length === 0 ? <div className="col-span-2 flex justify-center">
                         <div>
                             <div className="flex justify-center">
-                                <BsFillEmojiSmileFill className="text-9xl text-yellow-300 mb-5"></BsFillEmojiSmileFill>
+                                <BsFillEmojiSmileFill className="text-9xl text-[#ffcc33] mb-5"></BsFillEmojiSmileFill>
                             </div>
                             <h2 className="
                          text-4xl font-bold text-[#FD0054] text-center"> There are currently <br /> no products added to the cart. </h2>

@@ -69,9 +69,9 @@ const About = () => {
                 </div>
 
 
-                <div className="flex flex-col lg:flex-row gap-10 mt-10">
+                <div className="flex flex-col-reverse lg:flex-row gap-10 mt-10">
                     <div className="flex-1">
-                        <img className="w-full" src="https://i.ibb.co/7rP5NmJ/IMG-20231018-WA0021.jpg" alt="" />
+                        <img className="w-full" src="https://i.ibb.co/dmnB2gB/IMG-20231018-WA0025.jpg" alt="" />
                     </div>
 
                     <div className="flex-1">
