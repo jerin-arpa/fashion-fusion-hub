@@ -21,7 +21,7 @@ const About = () => {
                     <hr />
                 </div>
 
-                <div className="flex gap-10 mt-10">
+                <div className="flex flex-col lg:flex-row gap-10 mt-10">
 
                     <div className="flex-1">
                         <img className="w-full" src="https://i.ibb.co/5TrQ4zp/IMG-20231018-WA0022.jpg" alt="" />
@@ -38,7 +38,7 @@ const About = () => {
 
 
 
-                <div className="flex gap-10 mt-10">
+                <div className="flex flex-col lg:flex-row gap-10 mt-10">
                     <div className="flex-1">
                         <h2 className="my-5 text-3xl lg:text-5xl font-bold">Our Vission</h2>
                         <p className="mb-5">Fashion Fusion Hub pleasure rationally encounter consequences that extremely painful desires to obtain pain of itself porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.</p>
@@ -69,7 +69,7 @@ const About = () => {
                 </div>
 
 
-                <div className="flex gap-10 mt-10">
+                <div className="flex flex-col lg:flex-row gap-10 mt-10">
                     <div className="flex-1">
                         <img className="w-full" src="https://i.ibb.co/7rP5NmJ/IMG-20231018-WA0021.jpg" alt="" />
                     </div>

@@ -3,7 +3,6 @@ import { GiChemicalBolt } from "react-icons/gi";
 import { BsFillEmojiSmileFill } from "react-icons/bs";
 import Product from "../../Components/Product/Product";
 import image5 from '../../assets/images/5.webp';
-import Marquees from "../../Components/Marquees/Marquees";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import swiper1 from '../../assets/images/9.webp'
@@ -108,11 +107,6 @@ const Products = () => {
                 </div>
             </div>
 
-
-
-            <div className="my-5">
-                <Marquees></Marquees>
-            </div>
 
             {/* subscribe */}
             <div className="py-20 text-white">

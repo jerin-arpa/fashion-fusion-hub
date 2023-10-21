@@ -5,6 +5,7 @@ import image5 from '../../assets/images/5.webp';
 import Marquees from '../../Components/Marquees/Marquees';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { BsFillEmojiSmileFill } from 'react-icons/bs';
 
 const MyCart = () => {
 
@@ -15,14 +16,39 @@ const MyCart = () => {
 
     return (
         <div>
+            <div className='mt-10'>
+                <div className="flex justify-center gap-3">
+                    <div className="flex">
+                        <GiChemicalBolt className="text-2xl text-[#FD0054]"></GiChemicalBolt>
+                    </div>
+                    <p className="mb-4 text-xl">My Cart</p>
+                </div>
+                <div className="flex justify-center">
+                    <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-center w-2/3">My Cart Collections</h1>
+                </div>
+            </div>
+            <div className='container mx-auto px-5 mt-5'>
+                <hr />
+            </div>
+
             <div className='container mx-auto px-5 mt-10'>
                 {
-                    myCart.map(cart => <Cart key={cart._id} cart={cart} myCart={myCart} setMyCart={setMyCart}></Cart>)
+                    myCart.length === 0 ? <div className="col-span-2 flex justify-center">
+                        <div>
+                            <div className="flex justify-center">
+                                <BsFillEmojiSmileFill className="text-9xl text-yellow-300 mb-5"></BsFillEmojiSmileFill>
+                            </div>
+                            <h2 className="
+                         text-4xl font-bold text-[#FD0054] text-center"> There are currently <br /> no products added to the cart. </h2>
+                        </div>
+                    </div>
+                        :
+                        myCart.map(cart => <Cart key={cart._id} cart={cart} myCart={myCart} setMyCart={setMyCart}></Cart>)
                 }
             </div>
 
 
-            <div className="my-5">
+            <div className="my-5 mt-20">
                 <Marquees></Marquees>
             </div>
 

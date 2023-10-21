@@ -20,7 +20,7 @@ const ProductDetails = () => {
     const handleAddToCart = () => {
         const newProduct = { userEmail: user.email, product };
 
-        fetch('https://fashion-fusion-hub-server-10x2szige-ismat-jerins-projects.vercel.app/myCart', {
+        fetch('https://fashion-fusion-hub-server.vercel.app/myCart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const ProductDetails = () => {
 
     return (
         <div className="container mx-auto px-5 py-10">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 px-5">
                 <div className="col-span-1">
                     <img className="w-full h-full" src={product.image} alt="" />
                 </div>

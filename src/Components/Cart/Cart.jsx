@@ -20,7 +20,7 @@ const Cart = ({ cart, myCart, setMyCart }) => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`https://fashion-fusion-hub-server-10x2szige-ismat-jerins-projects.vercel.app/myCart/${_id}`, {
+                    fetch(`https://fashion-fusion-hub-server.vercel.app/myCart/${_id}`, {
                         method: 'DELETE',
                     })
                         .then(res => res.json())
@@ -43,12 +43,12 @@ const Cart = ({ cart, myCart, setMyCart }) => {
 
     return (
         <div>
-            <div className="pr-5 mb-5 border rounded-xl">
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+            <div className="mb-5 border rounded-xl">
+                <div className="grid grid-cols-1 lg:grid-cols-4 p-5">
                     <div className="col-span-1">
                         <img className="w-full h-full" src={image} alt="" />
                     </div>
-                    <div className="flex items-center col-span-3 py-5">
+                    <div className="flex items-center col-span-3 pt-5 lg:pl-5 lg:pt-0">
                         <div>
                             <p className='text-3xl text-[#FD0054] font-bold mb-5'>{name}</p>
 

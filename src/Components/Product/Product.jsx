@@ -8,7 +8,7 @@ const Product = ({ product }) => {
 
     return (
         <div>
-            <div className='bg-gray-50 grid grid-cols-1 md:grid-cols-2 justify-between h-96'>
+            <div className='bg-gray-50 grid grid-cols-1 md:grid-cols-2 justify-between lg:h-96'>
                 <div>
                     <img className="h-full" src={image} alt="" />
                 </div>

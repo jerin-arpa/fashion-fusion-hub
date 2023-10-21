@@ -14,7 +14,7 @@ const AddBrands = () => {
         console.log(newBrand);
 
 
-        fetch('https://fashion-fusion-hub-server-10x2szige-ismat-jerins-projects.vercel.app/brand', {
+        fetch('https://fashion-fusion-hub-server.vercel.app/brand', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
